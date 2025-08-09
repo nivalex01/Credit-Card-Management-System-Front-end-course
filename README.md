@@ -76,7 +76,18 @@ The system is fully implemented using **HTML**, **CSS**, and **JavaScript**, wit
 ---
 
 ## 📸 Screenshots
-*(Add your screenshots here)*
+**HomePage:** 
+<img width="2541" height="1256" alt="image" src="https://github.com/user-attachments/assets/55af48c4-8cac-42f6-a55a-38b6c0ba9d00" />
+
+**RegisterPage:**
+<img width="1481" height="713" alt="image" src="https://github.com/user-attachments/assets/c60fe8c9-6895-42fe-bf54-4dfd3fd76abe" />
+
+**DashBoardPage:**
+<img width="1498" height="677" alt="image" src="https://github.com/user-attachments/assets/d78eb490-a84f-4ffc-902d-fca9247273ca" />
+
+**PaymentsPage:**
+<img width="1493" height="740" alt="image" src="https://github.com/user-attachments/assets/05017855-de82-4de0-82fc-8b73aadf39d4" />
+
 
 ---
 
