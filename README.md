@@ -63,6 +63,15 @@ The system is fully implemented using **HTML**, **CSS**, and **JavaScript**, wit
 
 ---
 
+## Installation / Running Locally
+```bash
+git clone https://github.com/YourUsername/credit-card-management.git
+cd credit-card-management
+Open HomePage.html in your browser
+```
+
+
+---
 ## 🛠 Technical Details
 - **Storage**: All data is stored in `localStorage`:
   - `listOfUsers` – registered users
