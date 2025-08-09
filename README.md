@@ -65,7 +65,7 @@ The system is fully implemented using **HTML**, **CSS**, and **JavaScript**, wit
 
 ## Installation / Running Locally
 ```bash
-git clone https://github.com/YourUsername/credit-card-management.git
+git clone https://github.com/nivalex01/Credit-Card-Management-System-Front-end-course.git
 cd credit-card-management
 Open HomePage.html in your browser
 ```
