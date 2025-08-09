@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Credit Card Management</title>
+    <link rel="stylesheet" href="NavBarStyle.css">
+    <link rel="stylesheet" href="HomePageStyle.css" />
+    <script src="HamburgerMenuScript.js"></script>
+    <script src="LogOutScript.js"></script>
+    <script src="HompPageScript.js" defer></script>
+</head>
+<body>
+
+    <nav>
+        <span class="hamburger" onclick="HamburgerMenuOpen()">☰</span>
+        <div class="menu">
+            <a href="HomePage.html">Home Page</a>
+            <a href="RegisterPage.html">Register Page</a>
+            <a href="LoginPage.html">Login Page</a>
+            <a href="DashboardPage.html">Dashboard Page</a>
+            <a href="TransactionsPage.html">Transactions Page</a>
+            <a href="AddNewCardPage.html">Add New card</a>
+            <a href="FinancialTipsPage.html">Financial Tips</a>
+            <a href="SavingsPlannerPage.html">Saving Planner</a>
+            <a href="RecommendationsPage.html">Recommendations</a>
+            <button id="logoutButton" onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="background-image"></div>
+    <div class="container">
+        <section class="hero-section">
+            <h1>Welcome to Our Personal Credit Card Management Website</h1>
+            <p>Niv's and Dan's platform to manage your credit cards, track your expenses, and optimize your financial health</p>
+            <a href="#features" class="cta-btn" id="exploreBtn">Explore Features</a>
+        </section>
+
+        <!-- cards Section -->
+        <section class="cards-container" id="cardsSection">
+            <!-- the 6 cards of our website features will be displayed here -->
+        </section>
+    </div>
+</body>
+</html>

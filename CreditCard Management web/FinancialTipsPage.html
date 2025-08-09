@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Tips</title>
+    <link rel="stylesheet" href="NavBarStyle.css">
+    <link rel="stylesheet" href="FinancialTipsPageStyle.css">
+    <script src="LogOutScript.js"></script>
+    <script src="HamburgerMenuScript.js"></script>
+</head>
+<body>
+    <nav>
+        <span class="hamburger" onclick="HamburgerMenuOpen()">☰</span>
+        <div class="menu">
+            <a href="HomePage.html">Home Page</a>
+            <a href="RegisterPage.html">Register Page</a>
+            <a href="LoginPage.html">Login Page</a>
+            <a href="DashboardPage.html">Dashboard Page</a>
+            <a href="TransactionsPage.html">Transactions Page</a>
+            <a href="AddNewCardPage.html">Add New card</a>
+            <a href="FinancialTipsPage.html">Financial Tips</a>
+            <a href="SavingsPlannerPage.html">Saving Planner</a>
+            <a href="RecommendationsPage.html">Recommendations</a>
+            <button id="logoutButton" onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+    <div class="grid-container">
+        <div class="dashBoardcontainer">
+            <div class="header">Financial Tips</div>
+            <div class="total-expenses-box" id="total-expenses">
+                <!-- Total expenses for the current month will be dynamically inserted here -->
+            </div>
+            <div class="tips-container" id="tips">
+                <!-- Financial tips will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="FinancialTipPageScript.js"></script>
+</body>
+</html>

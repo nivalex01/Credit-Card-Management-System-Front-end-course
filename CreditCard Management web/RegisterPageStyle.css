@@ -1,0 +1,167 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh; 
+    background: linear-gradient(#ADD8E6, #E6F7FF);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* three columns grid */
+    grid-template-rows: 50px auto 200px 50px;
+    grid-gap: 10px;
+    text-align: center;
+    background: linear-gradient(#ADD8E6, #E6F7FF);
+    min-height: 100%;
+    height: 100vh;
+}
+
+.title {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    grid-column: 1 / span 3;
+    color: darkslateblue;
+}
+
+.grid-input-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    grid-column: 2;
+    border-radius: 3%;
+    padding: 40px;
+    margin-top: 150px;
+}
+
+.input-box, .input-box-date {
+    grid-column: 1 / span 3;
+    margin: 10px auto;
+    width: 80%;
+    height: 50px;
+    font-size: large;
+}
+
+.birthdate-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 1 / span 3;
+    margin: 10px auto;
+    width: 80%;
+}
+
+.input-box-date {
+    font-size: medium;
+    margin-right: 10px;
+}
+
+.data-label {
+    grid-column: 1 / span 2;
+    font-size: larger;
+}
+
+.submit-button {
+    grid-column: 1 / span 3;
+    margin: 30px auto;
+    width: 80%;
+    height: 50px;
+    background-color: darkslateblue;
+    color: aliceblue;
+    font-size: larger;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+        background-color: mediumslateblue;
+}
+
+a {
+    display: block;
+    margin: 10px auto;
+    color: darkslateblue;
+    text-decoration: none;
+    font-size: medium;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* media queries for responsive Part */
+@media (max-width: 768px) 
+{
+    .grid-container {
+        grid-template-columns: 1fr; /* single column grid */
+        grid-gap: 20px;
+    }
+
+    .grid-input-section {
+        grid-column: 1 / span 1;
+        padding: 10px;
+    }
+
+    .input-box, .input-box-date, .submit-button {
+        width: 100%;
+        font-size: medium;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: small;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .grid-input-section {
+        grid-column: 1 / span 1;
+        padding: 10px;
+        width: 85%; 
+        margin: 0 auto; 
+        box-sizing: border-box; 
+        margin-top:100px;
+    }
+
+    .input-box, .input-box-date, .submit-button {
+        font-size: 0.8rem;
+        height: 35px;
+        padding: 8px;
+        width: 80%; 
+        margin: 10px auto; 
+    }
+
+    .birthdate-container {
+        flex-direction: column; 
+        align-items: flex-start;
+        width: 80%; 
+        margin: 10px auto;
+    }
+
+    .input-box-date {
+        width: 100%; 
+        margin: 5px 0;
+    }
+
+    .data-label {
+        font-size: 0.9rem;
+        width: 80%; 
+        margin: 0 auto; 
+        text-align: left; 
+    }
+
+    a {
+        font-size: 0.7rem;
+    }
+}

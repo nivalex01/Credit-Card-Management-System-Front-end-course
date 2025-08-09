@@ -1,0 +1,200 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#ADD8E6, #E6F7FF);
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.dashBoardcontainer {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+    gap: 20px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    color: darkslateblue;
+    margin-bottom: 20px;
+    margin-top:80px;
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two columns grid */
+    gap: 20px;
+    text-align: center;
+}
+
+.info-box div {
+    background-color: #e2f7f8;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.credit-card-section {
+    display: grid;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.credit-card {
+    width: 300px;
+    height: 150px;
+    background: url('images/master-card-img.png') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-greeting {
+    font-size: 18px;
+    color: #333;
+}
+
+.amounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.amounts div {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.amounts .future-amount {
+    color: #e74c3c;
+}
+
+.credit-card-link {
+    display: none;
+}
+
+/* Birthday section*/
+.birthday-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fffae6; 
+    border: 2px dashed #ffc107; 
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.birthday-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff9800; 
+    margin-bottom: 10px;
+}
+
+.birthday-section #birthday-coupon {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.birthday-section button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff9800; /* Orange button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.birthday-section button:hover {
+    background-color: #e68900; 
+}
+
+/* the responsive part */
+@media (max-width: 768px) 
+{
+    .dashBoardcontainer {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .info-box div,
+    .amounts div {
+        font-size: medium;
+    }
+    .credit-card-link {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) 
+{
+
+.dashBoardcontainer {
+    width: 95%;
+    padding: 15px;
+}
+
+.header {
+    font-size: 1.2em;
+}
+
+.info-box {
+    grid-template-columns: 1fr; /* show the items vertically */
+    gap: 15px;
+}
+
+.info-box div, .amounts div {
+    font-size: small;
+    padding: 10px;
+}
+
+.credit-card-section {
+    margin-top: 20px;
+}
+
+.credit-card {
+    display: none; /* hide the credit card image, now we will show link (in phone sizes) */
+}
+
+.credit-card-link {
+    display:block;
+    font-size: 1em;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.amounts {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+}
+
+}

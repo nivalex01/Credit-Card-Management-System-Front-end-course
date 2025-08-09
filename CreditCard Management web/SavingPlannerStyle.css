@@ -1,0 +1,130 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#ADD8E6, #E6F7FF);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 150px auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; 
+}
+
+h1, h2 {
+    color: darkslateblue;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.blue-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .blue-btn:hover {
+        background-color: dodgerblue;
+    }
+
+section {
+    margin-bottom: 30px;
+}
+
+#progressSummary {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 780px) {
+    .container {
+        margin: 100px auto; 
+        padding: 15px; 
+    }
+
+    h1, h2 {
+        font-size: 1.5em; 
+    }
+
+    input, .blue-btn {
+        font-size: 14px;
+        padding: 8px; 
+    }
+}
+
+@media (max-width: 480px) 
+{
+    .container {
+        width: 95%; 
+        margin: 50px auto; 
+        padding: 15px; 
+    }
+
+    h1, h2 {
+        font-size: 1.2em; 
+    }
+
+    input, .blue-btn {
+        font-size: 12px; 
+        padding: 8px;
+    }
+
+    ul {
+        padding-left: 10px; 
+    }
+
+        ul li {
+            font-size: 0.9em; 
+        }
+
+    canvas {
+        max-width: 300px; /* Reduce maximum width for smaller screens */
+        max-height: 300px; /* Reduce maximum height */
+        width: 90%; /* Take up 90% of the parent container width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

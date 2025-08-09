@@ -1,0 +1,256 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#ADD8E6, #E6F7FF);
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+    padding: 20px;
+    margin-top: 120px;
+}
+
+.payments-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+    gap: 20px;
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    color: darkslateblue;
+    margin-bottom: 20px;
+}
+
+.select-month-section {
+    font-size: 18px;
+}
+
+.select-month-section select {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.total-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkgreen;
+    margin-top: 20px;
+}
+
+#transactions-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+#transactions-table th,#transactions-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#transactions-table th {
+    background-color: #f7f7f7;
+}
+
+#transactions-body tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#transactions-body tr:hover {
+    background-color: #d6e9f9;
+}
+
+/* Chart container styling */
+.charts-container {
+    display: grid;
+    gap: 40px;
+    margin-top: 30px;
+    width: 100%;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Chart styling */
+#paymentBarChart, #categoryPieChart, #paymentDoughnutChart {
+    width: 100%;
+    height: 400px; 
+    max-height: 500px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    width: 100% !important; 
+    height: 350px !important; 
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* the responsive part */
+@media (max-width: 768px) 
+{
+.payments-container {
+    width: 80%;
+    padding: 20px;
+}
+
+.header {
+    font-size: 1.5em;
+}
+
+.info-box div, .amounts div {
+    font-size: medium;
+}
+
+canvas {
+        height: 250px !important; /* change height for medium screens */
+        width: 400px !important;
+}
+
+.charts-container {
+    grid-template-columns: 1fr; /*  make one column grid for charts */
+}
+
+}
+
+@media (max-width: 480px) {
+.header {
+    font-size: 1.2em;
+}
+
+.payments-container {
+        width: 70%; 
+        padding: 15px; 
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+}
+.info-box div, .amounts div {
+    font-size: small;
+    height: 40px;
+}
+
+.credit-card {
+    width: 80%;
+    height: auto;
+}
+#transactions-table {
+    width: 100%; 
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: smaller; 
+}
+
+#transactions-table th, #transactions-table td {
+    padding: 8px; 
+    text-align: left; 
+    word-wrap: break-word; 
+}
+
+#transactions-table th {
+    background-color: #f0f8ff; 
+}
+
+#transactions-table tr {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    margin-bottom: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+}
+
+#transactions-table td::before {
+    content: attr(data-label); 
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#transactions-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+        canvas {
+        max-width: 300px; 
+        max-height: 300px; 
+        width: 50%; 
+        height: auto; 
+        }
+
+.charts-container {
+    grid-template-columns: 1fr; /* One column layout for charts */
+}
+
+}
+
+.info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px;
+    text-align: center;
+}
+
+.info-box div {
+        background-color: #e2f7f8;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 18px;
+}
+
+.credit-card-section {
+    display: grid;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.credit-card {
+    width: 300px;
+    height: 150px;
+    background: url('images/master-card-img.png') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-greeting {
+    font-size: 18px;
+    color: #333;
+}
+
+.amounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.amounts div {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.amounts .future-amount {
+    color: #e74c3c;
+}

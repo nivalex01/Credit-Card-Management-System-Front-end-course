@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Planner</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="NavBarStyle.css">
+    <link rel="stylesheet" href="SavingPlannerStyle.css">
+    <script src="LogOutScript.js"></script>
+    <script src="HamburgerMenuScript.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <nav>
+        <span class="hamburger" onclick="HamburgerMenuOpen()">☰</span>
+        <div class="menu">
+            <a href="HomePage.html">Home Page</a>
+            <a href="RegisterPage.html">Register Page</a>
+            <a href="LoginPage.html">Login Page</a>
+            <a href="DashboardPage.html">Dashboard Page</a>
+            <a href="TransactionsPage.html">Transactions Page</a>
+            <a href="AddNewCardPage.html">Add New card</a>
+            <a href="FinancialTipsPage.html">Financial Tips</a>
+            <a href="SavingsPlannerPage.html">Saving Planner</a>
+            <a href="RecommendationsPage.html">Recommendations</a>
+            <button id="logoutButton" onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Savings Planner</h1>
+
+        <!-- Set Savings Goal Section -->
+        <section id="set-goal">
+            <h2>Set Your Savings Goal</h2>
+            <label for="goalTarget">Target (for example: vacation or new home):</label>
+            <input type="text" id="goalTarget" placeholder="Enter your savings target">
+            <label for="goalAmount">Goal Amount ($):</label>
+            <input type="number" id="goalAmount" placeholder="Enter your savings goal">
+            <button onclick="setSavingsGoal()" class="blue-btn">Set Goal</button>
+        </section>
+
+        <!-- Progress Tracker Section -->
+        <section id="progress-tracker">
+            <h2>Savings Progress</h2>
+            <canvas id="progressChart" width="400" height="200"></canvas>
+            <p id="progressSummary"></p>
+        </section>
+
+        <!-- Log Savings Section -->
+        <section id="log-savings">
+            <h2>How much did you saved today?</h2>
+            <label for="savingsAmount">Amount Saved ($):</label>
+            <input type="number" id="savingsAmount" placeholder="Enter amount saved">
+            <button onclick="logSavings()" class="blue-btn">Log Savings</button>
+        </section>
+    </div>
+
+    <script src="SavingPlannerScript.js"></script>
+</body>
+</html>

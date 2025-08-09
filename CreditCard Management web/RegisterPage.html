@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="NavBarStyle.css">
+    <link rel="stylesheet" href="RegisterPageStyle.css">
+    <script src="HamburgerMenuScript.js"></script>
+    <script src="RegisterPageScript.js"></script>
+    <script src="LogOutScript.js"></script>
+</head>
+<body>
+    <nav>
+        <span class="hamburger" onclick="HamburgerMenuOpen()">☰</span>
+        <div class="menu">
+            <a href="HomePage.html">Home Page</a>
+            <a href="RegisterPage.html">Register Page</a>
+            <a href="LoginPage.html">Login Page</a>
+            <a href="DashboardPage.html">Dashboard Page</a>
+            <a href="TransactionsPage.html">Transactions Page</a>
+            <a href="AddNewCardPage.html">Add New card</a>
+            <a href="FinancialTipsPage.html">Financial Tips</a>
+            <a href="SavingsPlannerPage.html">Saving Planner</a>
+            <a href="RecommendationsPage.html">Recommendations</a>
+            <button id="logoutButton" onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="grid-container">
+        <h1 class="title">Credit Card Control Center</h1>
+        <div class="grid-input-section">
+            <h1 class="title">Sign Up</h1>
+            <input type="text" class="input-box" id="Email" placeholder="Email">
+            <input type="password" class="input-box" id="Password" placeholder="Password">
+            <div class="birthdate-container">
+                <label for="BirthDate" class="data-label">Enter your birth date:</label>
+                <input type="date" class="input-box-date" id="BirthDate" placeholder="Enter your birth date">
+            </div>
+            <input type="text" class="input-box" id="CreditCardNumber" placeholder="Credit Card Number">
+            <input type="text" class="input-box" id="expiration date" placeholder="Expiration Date MM/YY">
+            <input type="button" class="submit-button" id="submit-button" value="Submit" onclick="CheckSubmission()">
+        </div>
+    </div>
+</body>
+</html>

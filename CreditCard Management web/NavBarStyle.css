@@ -1,0 +1,82 @@
+﻿nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #e0e0e0; /* Silver/gray background color */
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #333; 
+    text-decoration: none;
+    text-align: center;
+    padding: 2% 8%;
+    transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+nav:hover {
+    background-color: #c0c0c0; /* slightly darker silver color on hover */
+}
+
+/* change border radius and color when hover the nav links */
+nav a:hover {
+    background-color: #333; 
+    color: #f1f1f1; 
+    transform: scale(0.95);
+    border-radius: 50%;
+}
+
+/* hamburger menu only when 1300 px and down */
+nav .hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+nav .menu {
+    display: flex;
+    flex-direction: row; /* Horizontal order */
+}
+
+nav .menu a {
+    padding: 10px 20px;
+}
+
+/* responsive nav bar, 1300 px and down */
+@media screen and (max-width: 1300px) 
+{
+nav {
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+nav .hamburger {
+    display: block;
+}
+
+nav .menu {
+display: none;
+flex-direction: column;
+position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #f1f1f1; /* Lighter silver background for menu */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+            nav .menu.active {
+                display:flex;
+            }
+
+            nav .menu a {
+                padding: 15px;
+                text-align: center;
+            }
+}

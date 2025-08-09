@@ -1,0 +1,106 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#ADD8E6, #E6F7FF);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+}
+
+.login-box {
+    background-color: whitesmoke;
+    border-radius: 3%;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.title {
+    font-weight: bold;
+    color: darkslateblue;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    width: 80%; 
+    margin: 10px 0;
+    height: 50px;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    width: 80%;
+    height: 50px;
+    background-color: darkslateblue;
+    color: aliceblue;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-button:hover {
+    background-color: mediumslateblue;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: darkslateblue;
+    text-decoration: none;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* the responsive part */
+@media (max-width: 768px) 
+{
+    .login-box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.5em;
+    }
+
+    .input-box, .login-button {
+        font-size: medium;
+    }
+
+    a {
+        font-size: small;
+    }
+}
+
+@media (max-width: 480px) 
+{
+    .title {
+        font-size: 1.2em;
+    }
+
+    .input-box, .login-button {
+        font-size: small;
+        height: 40px;
+    }
+
+    a {
+        font-size: x-small;
+    }
+}
